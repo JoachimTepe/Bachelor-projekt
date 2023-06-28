@@ -1,35 +1,21 @@
-import bluetooth
+import socket
 
-def send_file(file_path, target_device_address):
-    # Establish a Bluetooth socket connection
-    socket = bluetooth.BluetoothSocket(bluetooth.RFCOMM)
+target_address = "e4:70:b8:0c:f2:a5"  # Bluetooth address of the receiver device
+port = 3  # Port number for the Bluetooth connection
+pm3file = "graph.pm3"
 
-    try:
-        # Connect to the target Bluetooth device
-        socket.connect((target_device_address, 1))
-        print("Connected to the target device.")
+# Create a Bluetooth socket
+socket_obj = socket.socket(socket.AF_BLUETOOTH, socket.SOCK_STREAM, socket.BTPROTO_RFCOMM)
 
-        # Open the file for reading
-        with open(file_path, 'rb') as file:
-            # Read the file in chunks
-            chunk = file.read(1024)
+# Connect to the receiver device
+socket_obj.connect((target_address, port))
 
-            # Send file data in chunks
-            while chunk:
-                socket.send(chunk)
-                chunk = file.read(1024)
+# Read and send the file data
+with open(pm3file, "rb") as file:
+    chunk = file.read(1024)
+    while chunk:
+        socket_obj.send(chunk)
+        chunk = file.read(1024)
 
-        print("File sent successfully.")
-
-    except bluetooth.btcommon.BluetoothError as error:
-        print(f"Bluetooth connection error: {error}")
-
-    finally:
-        # Close the Bluetooth socket
-        socket.close()
-
-# Usage example
-file_path = "path/to/your/file.txt"  # Replace with the actual file path
-target_device_address = "XX:XX:XX:XX:XX:XX"  # Replace with the target device's Bluetooth address
-
-send_file(file_path, target_device_address)
+# Close the connection
+socket_obj.close()
