@@ -4,5 +4,9 @@ lf sniff
 data save -f graph.pm3
 lf sniff
 data save -f graph.pm3
+lf sniff
+data save -f graph.pm3
 data load -f graph.mp3
 lf sim
+lf sniff
+data save -f graph.pm3
