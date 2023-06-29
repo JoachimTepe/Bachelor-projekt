@@ -24,3 +24,67 @@
 [usb|script] pm3 --> data save -f graph.pm3
 [=] FILE PATH:  graph.pm3
 [+] saved 49671 bytes to PM3 file 'graph.pm3'
+[+] loaded from JSON file C:/Users/ptouv/PycharmProjects/Bachelor-projekt/.proxmark3/preferences.json
+[+] execute command from commandline: data load -f graph.pm3; lf sim
+
+[=] Using UART port COM4
+[=] Communicating with PM3 over USB-CDC
+[usb|script] pm3 --> data load -f graph.pm3
+[+] loaded 10923 samples
+[usb|script] pm3 --> lf sim
+[=] converted Graphbuffer to bitstream values (0|1)
+[=] .......................
+
+[=] Press <Enter> or pm3-button to abort simulation
+[+] loaded from JSON file C:/Users/ptouv/PycharmProjects/Bachelor-projekt/.proxmark3/preferences.json
+[+] execute command from commandline: data load -f graph.pm3; lf sim
+
+[=] Using UART port COM4
+[=] Communicating with PM3 over USB-CDC
+[usb|script] pm3 --> data load -f graph.pm3
+[+] loaded 10923 samples
+[usb|script] pm3 --> lf sim
+[=] converted Graphbuffer to bitstream values (0|1)
+[=] .......................
+
+[=] Press <Enter> or pm3-button to abort simulation
+[=] Done
+[+] loaded from JSON file C:/Users/ptouv/PycharmProjects/Bachelor-projekt/.proxmark3/preferences.json
+[+] execute command from commandline: data load -f graph.pm3; lf sim
+
+[=] Using UART port COM4
+[=] Communicating with PM3 over USB-CDC
+[usb|script] pm3 --> data load -f graph.pm3
+[+] loaded 10923 samples
+[usb|script] pm3 --> lf sim
+[=] converted Graphbuffer to bitstream values (0|1)
+[=] .......................
+
+[=] Press <Enter> or pm3-button to abort simulation
+[=] Done
+[+] loaded from JSON file C:/Users/ptouv/PycharmProjects/Bachelor-projekt/.proxmark3/preferences.json
+[+] execute command from commandline: data load -f graph.pm3; lf sim
+
+[=] Using UART port COM4
+[=] Communicating with PM3 over USB-CDC
+[usb|script] pm3 --> data load -f graph.pm3
+[+] loaded 10923 samples
+[usb|script] pm3 --> lf sim
+[=] converted Graphbuffer to bitstream values (0|1)
+[=] .......................
+
+[=] Press <Enter> or pm3-button to abort simulation
+[=] Done
+[+] loaded from JSON file C:/Users/ptouv/PycharmProjects/Bachelor-projekt/.proxmark3/preferences.json
+[+] execute command from commandline: data load -f graph.pm3; lf sim
+
+[=] Using UART port COM4
+[=] Communicating with PM3 over USB-CDC
+[usb|script] pm3 --> data load -f graph.pm3
+[+] loaded 10923 samples
+[usb|script] pm3 --> lf sim
+[=] converted Graphbuffer to bitstream values (0|1)
+[=] .......................
+
+[=] Press <Enter> or pm3-button to abort simulation
+[=] Done

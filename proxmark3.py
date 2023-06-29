@@ -1,6 +1,7 @@
 import os
 import subprocess
-
+import datetime
+curr_time = datetime.datetime.now().time()
 
 def run_command(_cmd):
     # Adding binaries for the os environment
@@ -26,5 +27,6 @@ def run_sniff_cmd():
 def run_sim_cmd():
     proxmark3_path = "C:\\working\\ProxSpace\\pm3\\proxmark3\\client"
     cmd = f'{proxmark3_path}\\proxmark3 COM4 -c "data load -f graph.pm3; lf sim"'
+    print("pre simulation " + str(curr_time.hour), curr_time.minute, curr_time.second, curr_time.microsecond)
     run_command(cmd)
 
