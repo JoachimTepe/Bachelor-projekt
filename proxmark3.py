@@ -25,6 +25,6 @@ def run_sniff_cmd():
 
 def run_sim_cmd():
     proxmark3_path = "C:\\working\\ProxSpace\\pm3\\proxmark3\\client"
-    cmd = f'{proxmark3_path}\\proxmark3 COM4 -c "data load -f graph.mp3; lf sim"'
+    cmd = f'{proxmark3_path}\\proxmark3 COM4 -c "data load -f graph.pm3; lf sim"'
     run_command(cmd)
 
