@@ -1,7 +1,6 @@
 import connection
 import proxmark3
 
-
 # Connecting and saving pm3 file
 connection.receive_file()
 
