@@ -2,6 +2,7 @@ import os
 import subprocess
 import datetime
 
+
 def run_command(_cmd):
     # Adding binaries for the os environment
     os.environ['PATH'] += os.pathsep + r"C:\working\ProxSpace\msys2\mingw64\bin"
@@ -33,4 +34,3 @@ def run_sim_cmd():
     curr_time = datetime.datetime.now().time()
     print("pre simulation " + str(curr_time.hour), curr_time.minute, curr_time.second, curr_time.microsecond)
     run_command(cmd)
-
