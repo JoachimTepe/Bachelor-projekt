@@ -1,6 +1,8 @@
 import os
 import subprocess
-import datetime
+
+file_name = "graph.pm3"
+length_of_signal = 5000
 
 
 def run_command(_cmd):
@@ -19,18 +21,17 @@ def run_command(_cmd):
 
 
 def run_sniff_cmd():
-    proxmark3_path = "C:\\working\\ProxSpace\\pm3\\proxmark3-4.16191\\client"
-    cmd = f'{proxmark3_path}\\proxmark3 COM4 -c "lf config -t 20; lf sniff; data save -f graph.pm3"'
-    curr_time = datetime.datetime.now().time()
-    print("Pre sniffing " + str(curr_time.hour), curr_time.minute, curr_time.second, curr_time.microsecond)
+    proxmark3_path = "C:\\working\\ProxSpace\\pm3\\proxmark3\\client"
+    cmd = f'{proxmark3_path}\\proxmark3 COM4 -c "lf config -t 20; lf sniff; data save -f {file_name}"'
     run_command(cmd)
-    curr_time = datetime.datetime.now().time()
-    print("post sniffing " + str(curr_time.hour), curr_time.minute, curr_time.second, curr_time.microsecond)
 
 
 def run_sim_cmd():
     proxmark3_path = "C:\\working\\ProxSpace\\pm3\\proxmark3\\client"
-    cmd = f'{proxmark3_path}\\proxmark3 COM4 -c "data load -f graph.pm3; lf sim"'
-    curr_time = datetime.datetime.now().time()
-    print("pre simulation " + str(curr_time.hour), curr_time.minute, curr_time.second, curr_time.microsecond)
+    cmd = f'{proxmark3_path}\\proxmark3 COM4 -c "data load -f {file_name}; lf sim"'
     run_command(cmd)
+
+
+def delete_file():
+    if os.path.exists(file_name):
+        os.remove(file_name)
