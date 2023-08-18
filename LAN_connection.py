@@ -2,19 +2,18 @@ import socket
 
 # Adding a transfer speed that ensures the whole file can be sent in a single TCP packet
 transfer_speed = 32768
-
-# Using tcp port
+# Using the port on which the host server is listening for requests
 port = 8080
 # Create a socket object
 s = socket.socket()
 # Define the host (target device) and file name
-host = "LAPTOP-MEGPB18A"
+host_A = "LAPTOP-MEGPB18A"
 file_name = "graph.pm3"
 
 
 def receive_file():
     # Connect to the host and port
-    s.connect((host, port))
+    s.connect((host_A, port))
     print("Connected...")
 
     # Open the file in write-binary mode
@@ -30,8 +29,8 @@ def receive_file():
 
 
 def setup():
-    # Bind the socket to the host and port
-    s.bind((host, port))
+    # Bind the socket to the hostname of the server pc and port
+    s.bind((host_A, port))
 
     # Listen for incoming connections with a maximum queue size of 1
     s.listen(1)

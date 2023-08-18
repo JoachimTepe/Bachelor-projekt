@@ -1,8 +1,8 @@
 import os
 import subprocess
 
-file_name = "graph.pm3"
-length_of_signal = 5000
+file_name = "graph.pm3" # Just a generic name for the file.
+length_of_signal = 5000 # Regular length of a LF RFID signal from the car is 3500
 
 
 def run_command(_cmd):
